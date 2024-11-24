@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'roboto';
 }
 
 .header,
@@ -10,8 +11,70 @@
     border: 2px solid black;
 }
 
+.sidebar {
+    padding: 15px;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #06b6d4;
+    color: white;
+}
+
+.sidebar > h1 {
+    font-size: 1.8rem;
+}
+
 .wrapper {
     display: grid;
-    grid-column: 1fr 2fr;
-    grid-row: 1fr 2fr;
+    grid-template-columns: 20% 80%;
+}
+
+.first-buttons h1, .second-buttons h1 {
+    font-size: 1.3rem;
+}
+
+.main-content {
+    grid-column: -2;
+}
+
+.header {
+    grid-column: 1 / -1;
+}
+
+.upper-header {
+    display: flex;
+}
+
+.upper-header > * {
+    flex: auto;
+}
+
+.announcements {
+    grid-column: 3;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.projects {
+    grid-column: 1;
+}
+
+.announcements {
+    grid-column: 3;
+}
+
+.trending {
+
+}
+
+.header-content button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 1.5em;
+    border: 0;
 }
